@@ -5,15 +5,20 @@
     <title>Manage Team</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
 </head>
 
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Fantasy Cricket</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor02">
@@ -36,7 +41,8 @@
             </ul>
             <ul class="navbar-nav navbar-right">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="fa fa-user mr-sm-2"></span>Qasim
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,8 +56,103 @@
         </div>
     </nav>
     <!-- Header -->
-    <img src="select-teams.PNG" class="rounded mx-auto d-block mt-3">
-    <br />
+    <div class="container" style="display: inline-block;">
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-md-1"></div>
+            <table class="table table-hover col-md-4" id="select-players">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">
+                            <select class="custom-select custom-select-sm">
+                                <option selected>Skills</option>
+                                <option value="all">All</option>
+                                <option value="batsmen">Batsmen</option>
+                                <option value="bowler">Bowler</option>
+                                <option value="allrounder">All Rounder</option>
+                                <option value="wicketkeeper">Wicket Keeper</option>
+                            </select>
+
+                        </th>
+                        <th scope="col">
+                            <select class="custom-select custom-select-sm">
+                                <option selected>Country</option>
+                                <option value="all">All</option>
+                                <option value="1">Pakistan</option>
+                                <option value="2">Sirilanka</option>
+                            </select>
+                        </th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td colspan="2">
+                            <span class=""><img src="img/sangakkara.png" alt="" width="40px" height="40px"></span>
+                            <span class="font-weight-bold">Sangakkara</span>
+                            <span class="font-weight-lighter" style="font-size: smaller;">rhb</span>
+                        </td>
+                        <td>
+                            <span>
+                                <i class="fa fa-plus-square"></i>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td colspan="2">
+                            <span class=""><img src="img/sangakkara.png" alt="" width="40px" height="40px"></span>
+                            <span class="font-weight-bold">Sangakkara</span>
+                            <span class="font-weight-lighter" style="font-size: smaller;">rhb</span>
+                        </td>
+                        <td>
+                            <span>
+                                <i class="fa fa-plus-square"></i>
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="col-md-1"></div>
+            <table class="table table-hover col-md-4" id="my-team">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">
+                            <select class="custom-select custom-select-sm">
+                                <option selected disabled>Your Team</option>
+                            </select>
+                        </th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th>1</th>
+                        <td colspan="2">
+                            <span class=""><img src="img/sangakkara.png" alt="" width="40px" height="40px"></span>
+                            <span class="font-weight-bold">Kumar Sangakkara</span>
+                            <span class="font-weight-lighter" style="font-size: smaller;">rhb</span>
+                        </td>
+                        <td>
+                            <span>
+                                <i class="fa fa-minus-square"></i>
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    
     <!-- Footer -->
     <footer class="page-footer font-small white" style="left :0;bottom: 0;width: 100%;
             background-color: #007bff;color: #fff">
@@ -62,9 +163,16 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+
+    <!--
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
