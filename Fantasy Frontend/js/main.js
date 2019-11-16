@@ -12,7 +12,6 @@ $('#select-players tbody').on('click','tr td span i', function (e) {
     $(this).closest('tr').remove();
 });
 
-
 $('#my-team tbody').on('click', 'tr td span i', function (e) {
     $(this).closest('i').removeClass('fa-minus-square');
     $(this).closest('i').addClass('fa-plus-square');
@@ -20,4 +19,3 @@ $('#my-team tbody').on('click', 'tr td span i', function (e) {
     $('#select-players tbody').append('<tr>'+row+'</tr>');
     $(this).closest('tr').remove();
 });
-
