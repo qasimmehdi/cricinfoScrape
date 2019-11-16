@@ -4,17 +4,17 @@ $(document).ready(function($) {
     });
 });
 
-$('#select-players tbody').on('click','tr td span i', function (e) {
-    $(this).closest('i').removeClass('fa-plus-square');
-    $(this).closest('i').addClass('fa-minus-square');
+$('#select-players tbody').on('click','tr', function (e) {
+    $(this).find('i:first').removeClass('fa-plus-square');
+    $(this).find('i:first').addClass('fa-minus-square');
     var row = $(this).closest('tr').html();
     $('#my-team tbody').append('<tr>'+row+'</tr>');
     $(this).closest('tr').remove();
 });
 
-$('#my-team tbody').on('click', 'tr td span i', function (e) {
-    $(this).closest('i').removeClass('fa-minus-square');
-    $(this).closest('i').addClass('fa-plus-square');
+$('#my-team tbody').on('click', 'tr', function (e) {
+    $(this).find('i:first').removeClass('fa-minus-square');
+    $(this).find('i:first').addClass('fa-plus-square');
     var row = $(this).closest('tr').html();
     $('#select-players tbody').append('<tr>'+row+'</tr>');
     $(this).closest('tr').remove();
