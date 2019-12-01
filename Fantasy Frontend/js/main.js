@@ -28,6 +28,9 @@ $('#select-players tbody').on('click', 'tr', function (e) {
         $('#my-team tbody').append('<tr>' + row + '</tr>');
         $(this).closest('tr').remove();
         count++;
+        if(count == 11){
+            document.querySelector('#save-team').disabled = false;
+        }
         maintainNumbering('#select-players');
     }
     else {
@@ -43,4 +46,5 @@ $('#my-team tbody').on('click', 'tr', function (e) {
     $(this).closest('tr').remove();
     maintainNumbering('#my-team');
     count--;
+    document.querySelector('#save-team').disabled = true;
 });
